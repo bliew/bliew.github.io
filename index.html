@@ -1,142 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Breonna Liew's Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
-    <!--Navbar Section-->
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="#about" id="navbar__logo">Breonna Liew</a>
-            <!--Create the three lines for menu dropdown -->
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="#about" class="navbar__links" id="about-page">About</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#experience" class="navbar__links" id="experience-page">Experience</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#projects" class="navbar__links" id="projects-page">Projects</a>
-                </li>
-            </ul>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <img class="resume-img" src="resume_image.jpg" />
+        <div class="home-intro">
+          <h2 class="name">Breonna Liew</h2>
+          <p>Software Engineer</p>
         </div>
-    </nav>
-
-    <!--About Me Section-->
-    <section class="about-me" id="about">
-        <div class="about-me__container">
-            <div class="about-me__profile">
-                <img src="resume_image.jpeg" alt="Profile Picture">
-            </div>
-            <div class="about-me__info">
-                <h1>Hi, I'm Breonna Liew</h1>
-                <p>As a recent graduate of Northeastern University with a Bachelors in Electrical Engineering, I have discovered an interest for frontend software development through coursework and side projects.</p>
-                <p>Currently <span>open to work</span>. Based in <span>New York City</span>, but open to relocation.</p>
-                <div class="about-me__icons">
-                    <a class="social-icons" href="https://www.linkedin.com/in/breonna-liew-811398189">
-                        <i class="fa fa-linkedin-square"></i>
-                    </a>
-                    <a class='social-icons' href="https://github.com/bliew">
-                        <i class="fa fa-github"></i>
-                    </a>
-                </div>
-            </div>
+      </section>
+      <section id="about">
+        <div class="about-intro">
+          <p class="about-blurb">
+            I'm an avid traveler, a dedicated reader of pschological thrillers
+            and a true crime enthusiast who can't get enough of Stephanie Soo's
+            captivating podcasts.
+          </p>
+          <div class="about-pictures">
+            <img class="about-travel-pics" src="japan.jpg" />
+            <p class="about-travel-pics-label">Japan</p>
+            <img class="about-travel-pics" src="korea.jpg" />
+            <p class="about-travel-pics-label">Korea</p>
+            <img class="about-travel-pics" src="malaysia.jpg" />
+            <p class="about-travel-pics-label">Malaysia</p>
+          </div>
         </div>
-    </section>
-
-    <!--Experience Section-->
-    <section class="experience-timeline" id="experience">
-        <h1 class="experience-title">Experience</h1>
-        <div class="experience__container">
-            <h2>2020</h2>
-            <div class="timeline__item">
-                <h3>Notch Technologies</h3>
-                <p>Electrical Engineer Co-op</p>
-                <ul>
-                    <li>Programmed Raspberry Pis with Python to collect data and create an autonomous anti-jamming peer to peer link between interfaces</li>
-                    <li>Increased accuracy of beamforming by using Linux commands to analyze bandwidth values</li>
-                    <li>Successfully assembled and tested the prototype used to demonstrate how proprietary metamaterial can be manipulated in creating smart antennas.</li>
-                    <li>Optimized size of prototype by designing a smaller controller board to manipulate multiple metamaterial solutions.</li>
-                </ul>
-            </div>
-            <h2>2018</h2>
-            <div class="timeline__item">
-                <h3>Corindus Vascular Robotics</h3>
-                <p>R&D Software Engineer Co-op</p>
-                <ul>
-                    <li>Modified data mining program to retrieve and categorize test results obtained from testing movement and position of the balloon stents.</li>
-                    <li>Programmed MD04000 Tektronix Oscilloscope to remotely record wavelengths of a continuous waveform to analyze length of breaks between the transmissions of signals.</li>
-                    <li>Conducted test procedures on software protocols by providing effective feedback and finding a solution for better functionality</li>
-                </ul>
-            </div>
-            <h2>2017</h2>
-            <div class="timeline__item">
-                <h3>Nova Biomedical</h3>
-                <p>Electrical Engineer Co-op</p>
-                <ul>
-                    <li>Applied knowledge of reading schematics, oscilloscopes and soldering to repair broken parts on PCBs.</li>
-                    <li>Administered troubleshooting procedures on final products of blood analyzers to inspect for any inaccuracy in the analysis report.</li>
-                    <li>Increased efficiency of testing time by performing multiple test procedures on various products whilst writing test procedures for assembly parts.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!--Projects Section-->
-    <section class="project__showcase" id="projects">
-        <h1 class="section__header">Projects</h1>
-        <div class="project__container">
-            <div class="project" id="fpga">
-                <img class="project__image" src="fpga__project.jpg" alt="fpga-project">
-                <div class="project__overlay">
-                    <h2>FPGA Fruit Classification</h2>
-                    <p>Created PYNQ overlay to classify various fruit images using Canny Edge Detection.</p>
-                    <a href="https://github.com/bliew/FPGA_Fruit_Detection"> Repo </a>
-                </div>
-            </div>
-            <div class="project" id="webscraper">
-                <img class="project__image" src="foodlyicon.jpg" alt="food-chat-app-project">
-                <div class="project__overlay">
-                    <h2>Foods Chat App</h2>
-                    <p>Users can interact with a chatbot through Facebook Messenger and request information stored in MySQL on types of cuisines or restaurants they are interested in trying.</p>
-                    <a href="https://github.com/seanngpack/food_chat_app">Repo</a>
-                </div>
-            </div>
-            <div class="project" id="gaussian">
-                <img class="project__image" src="GaussianTrainClassifiericon.jpg" alt="google-glasses-project">
-                <div class="project__overlay">
-                    <h2>Activity Classification of Google Glasses User</h2>
-                    <p>Achieved about 99% accuracy in classifying user’s movements by comparing results from MAP Classifier, Gaussian SVM Classifier, Kernel Trick and Linear SVM Classifier on dataset.</p>
-                    <a href="https://github.com/jstraceski/EECE5644_Project"> Repo </a>
-                </div>
-            </div>
-            <div class="project" id="gaussian">
-                <img class="project__image" src="resume_image.jpeg" alt="google-glasses-project">
-                <div class="project__overlay">
-                    <h2>Personal Website</h2>
-                    <p>This personal, responsive website was designed and created by me using HTML, CSS and JS.</p>
-                    <a href="https://github.com/bliew/bliew.github.io"> Repo </a>
-                </div>
-            </div>
-    </section>
+      </section>
+      <section id="portfolio">
+        <!-- Portfolio content goes here -->
+      </section>
+      <section id="contact">
+        <!-- Contact content goes here -->
+      </section>
+    </main>
+    <footer></footer>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
