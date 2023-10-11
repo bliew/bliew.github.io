@@ -4,6 +4,11 @@ body {
 }
 
 /* Navbar styling */
+
+.menu-button{
+    display:none; /*For screens larger than mobile*/
+}
+
 .navbar {
     background-color: rgb(160, 207, 184); /* Mint green color */
     border-bottom: 1px solid white;
@@ -73,20 +78,37 @@ main{
         background-color: rgb(205, 243, 224); 
         padding:20px;
     }
-    
-    .navbar ul {
-        flex-direction: column;
-        text-align: center;
-        position: absolute;
-        background-color: rgb(205, 243, 224); /* Mint green color */
-        width: 100%;
-        top: 70px; /* Adjust as needed */
-        left: 0;
-        display: none; /* Hide by default */
+
+    #menu-button{
+        display:block;
+        cursor:pointer;
     }
 
-    .navbar.open ul {
-        display: flex; /* Show when the menu is open */
+    .navbar{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        background-color: rgb(205, 243, 224);  /* Mint green color */
+        border-bottom: 1px solid white;
+        padding: 10px;
+        display:flex;
+        justify-content: left;
+        align-items: center;
+
+    }
+
+    .navbar ul {
+        display:none;
+        list-style:none;
+        padding:0;
+        margin:0;
+        position:absolute;
+        transition:transform 0.3s ease-in-out;
+    }
+
+    .navbar ul.open {
+        display: block; /* Show when the menu is open */
         justify-content: center;
         gap: 20px;
     }
@@ -105,6 +127,7 @@ main{
         flex-direction: column;
         text-align:center;
         align-items: center;
+        scroll-margin-top: 50px;
     }
 
     .resume-img{
