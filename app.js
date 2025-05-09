@@ -1,52 +1,40 @@
-const menu = document.querySelector('#mobile-menu')
-const menuLinks = document.querySelector('.navbar__menu')
-const navLogo = document.querySelector('#navbar__logo')
+const buttons = document.querySelectorAll('.tabs button');
 
-//Display Mobile Menu
-const mobileMenu = () => {
-    menu.classList.toggle('is-active')
-    menuLinks.classList.toggle('active')
-};
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const tabId = button.textContent.toLowerCase();
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach((tab) => {
+      tab.classList.remove('active');
+    });
 
-menu.addEventListener('click', mobileMenu);
-
-//Highlight tab when scrolling
-const highlightMenu = () => {
-    const elem = document.querySelector('.highlight')
-    const aboutMenu = document.querySelector('#about-page')
-    const experienceMenu = document.querySelector('#experience-page')
-    const projectMenu = document.querySelector('#projects-page')
-    let scrollPos = window.scrollY //returns Y coordinate of Y cordinate of top edge of current viewport
-
-    if (window.innerWidth > 960 && scrollPos < 600) {
-        aboutMenu.classList.add('highlight')
-        experienceMenu.classList.remove('highlight')
-        return
-    } else if (window.innerWidth > 960 && scrollPos < 2400) {
-        aboutMenu.classList.remove('highlight')
-        experienceMenu.classList.add('highlight')
-        projectMenu.classList.remove('highlight')
-        return
-    } else if (window.innerWidth > 960 && scrollPos < 3400) {
-        experienceMenu.classList.remove('highlight')
-        projectMenu.classList.add('highlight')
-        return
-    } else if ((elem && window.innerWidth > 960 && scrollPos < 600) || elem) {
-        elem.classList.remove('highlight')
+    const activeTab = document.getElementById(tabId);
+    if (activeTab) {
+      activeTab.classList.add('active');
+    } else {
+      tab.classList.remove('active');
     }
-};
+  });
+});
 
-window.addEventListener('scroll', highlightMenu);
-window.addEventListener('click', highlightMenu);
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
 
-//Close Mobile Menu
-const hideMobileMenu = () => {
-    const menuBars = document.querySelector('.is-active')
-    if (window.innerWidth <= 960 && menuBars) {
-        menu.classList.toggle('is-active')
-        menuLinks.classList.remove('active')
-    }
-};
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-menuLinks.addEventListener('click', hideMobileMenu);
-navLogo.addEventListener('click', hideMobileMenu);
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
