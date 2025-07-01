@@ -22,84 +22,145 @@
       type="text/css"
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
     />
+    =
   </head>
   <body>
-    <div class="container">
-      <header class="header">
-        <img class="profile-pic" src="profile_picture.png" />
-        <h1 class="header-welcome">Welcome!</h1>
-
-        <p class="subheader">I'm <b>Breonna Liew</b></p>
-        <nav class="tabs">
-          <button>About</button>
-          <button>Skills</button>
-          <button>Projects</button>
+    <div class="container my-4">
+      <header class="mb-4">
+        <nav class="navigation nav justify-content-center gap-4z">
+          <button id="nav-toggle">&#9776;</button>
+          <div id="nav-buttons">
+            <button class="nav-tab" data-target="about">About</button>
+            <button class="nav-tab" data-target="skills">Skills</button>
+            <button class="nav-tab" data-target="projects">Projects</button>
+          </div>
         </nav>
       </header>
 
       <div class="inner-container">
-        <section id="about" class="tab-content active" data-layout="block">
-          <h2>About Me</h2>
-          <p>
-            Hi there! I am a Software Developer with <b>3 years</b> of
-            experience, mostly focused on backend development, but I'm not
-            afraid to dive into the frontend when needed. I have worked with
-            tools like <b>Nest.js</b>, <b>React</b>, <b>Docker</b>, <b>MySQL</b>
-            and more. I am always looking to learn new things and take on
-            challenges!
-          </p>
-          <div class="status-row"></div>
+        <section id="about" class="section-content active" data-layout="block">
+          <div class="about-header">
+            <img class="profile-pic" src="profile_picture.png" />
+            <h1 class="about-welcome">Welcome!</h1>
+            <p class="subheader">I'm <b>Breonna Liew</b></p>
+          </div>
+          <div>
+            <h2>About Me</h2>
+            <p>
+              Hi there! I am a Software Developer with <b>3 years</b> of
+              experience, mostly focused on backend development, but I'm not
+              afraid to dive into the frontend when needed. I have worked with
+              tools like <b>Nest.js</b>, <b>React</b>, <b>Docker</b>,
+              <b>MySQL</b>
+              and more. I am always looking to learn new things and take on
+              challenges!
+            </p>
+          </div>
         </section>
 
-        <section id="skills" class="tab-content" data-layout="grid">
-          <i class="devicon-nestjs-plain colored"></i>
-          <i class="devicon-prisma-original"></i>
-          <i class="devicon-typescript-plain"></i>
-          <i class="devicon-amazonwebservices-plain-wordmark"></i>
-          <i class="devicon-react-original colored"></i>
-          <i class="devicon-docker-plain colored"></i>
-          <i class="devicon-mysql-plain colored"></i>
-          <i class="devicon-html5-plain"></i>
-          <i class="devicon-css3-plain"></i>
-          <i class="devicon-javascript-plain colored"></i>
+        <section id="skills" class="section-content" data-layout="block">
+          <h2>Technical Skills</h2>
+          <div class="skills-wrapper">
+            <div class="skills-category">
+              <h3>Frontend</h3>
+              <i class="devicon-react-original colored" title="React"></i>
+              <i class="devicon-html5-plain" title="HTML5"></i>
+              <i class="devicon-css3-plain" title="CSS3"></i>
+              <i
+                class="devicon-javascript-plain colored"
+                title="JavaScript"
+              ></i>
+            </div>
+            <div class="skills-category">
+              <h3>Backend</h3>
+              <i class="devicon-nestjs-plain colored" title="NestJS"></i>
+              <i class="devicon-prisma-original" title="Prisma"></i>
+              <i class="devicon-mysql-plain colored" title="MySQL"></i>
+            </div>
+            <div class="skills-category">
+              <h3>Cloud & DevOps</h3>
+              <i class="devicon-docker-plain colored" title="Docker"></i>
+              <i
+                class="devicon-amazonwebservices-plain-wordmark"
+                title="AWS"
+              ></i>
+            </div>
+          </div>
         </section>
 
-        <section id="projects" class="tab-content" data-layout="block">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <h2>Project 1</h2>
-                <div class="project-container">
-                  <img class="project-image" src="foodlyicon.jpg" />
-                  <p class="project-description">
-                    An application created using a chatbot
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <h2>Project 2</h2>
-                <div class="project-container">
-                  <img class="project-image" src="foodlyicon.jpg" />
-                  <p class="project-description">
-                    An application created using a chatbot
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <h2>Project 3</h2>
-                <div class="project-container">
-                  <img class="project-image" src="foodlyicon.jpg" />
-                  <p class="project-description">
-                    An application created using a chatbot asdf asdf asdf adfa
-                    fdsa fdsaasfda asdf asdfasdf asdfasdfasdf asdfasdf
-                  </p>
-                </div>
+        <section id="projects" class="section-content" data-layout="block">
+          <h2>Projects</h2>
+          <div class="projects-scroll-grid">
+            <div class="project-card">
+              <img
+                class="project-image"
+                src="foodlyicon.jpg"
+                alt="Foodly App"
+              />
+              <div class="project-overlay">
+                <h3>Project 1</h3>
+                <p>
+                  Foodly is a web application that allows users to search for
+                  recipes, save their favorites, and create shopping lists.
+                </p>
               </div>
             </div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="project-card">
+              <img
+                class="project-image"
+                src="foodlyicon.jpg"
+                alt="Foodly App"
+              />
+              <div class="project-overlay">
+                <h3>Project 1</h3>
+                <p>
+                  Foodly is a web application that allows users to search for
+                  recipes, save their favorites, and create shopping lists.
+                </p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                class="project-image"
+                src="foodlyicon.jpg"
+                alt="Foodly App"
+              />
+              <div class="project-overlay">
+                <h3>Project 1</h3>
+                <p>
+                  Foodly is a web application that allows users to search for
+                  recipes, save their favorites, and create shopping lists.
+                </p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                class="project-image"
+                src="foodlyicon.jpg"
+                alt="Foodly App"
+              />
+              <div class="project-overlay">
+                <h3>Project 1</h3>
+                <p>
+                  Foodly is a web application that allows users to search for
+                  recipes, save their favorites, and create shopping lists.
+                </p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img
+                class="project-image"
+                src="foodlyicon.jpg"
+                alt="Foodly App"
+              />
+              <div class="project-overlay">
+                <h3>Project 1</h3>
+                <p>
+                  Foodly is a web application that allows users to search for
+                  recipes, save their favorites, and create shopping lists.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </div>
